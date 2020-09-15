@@ -69,7 +69,17 @@ const generatePDF = async (name) => {
       type: "application/pdf;charset=utf-8",
     }
   );
- saveAs(file);
+ //saveAs(file);
+ function SaveAsFile(t,f,m) {
+  try {
+      var b = new Blob([t],{type:m});
+      saveAs(b, f);
+ } catch (e) {
+       window.open("data:"+m+"," + encodeURIComponent(t), '_blank','');
+ }
+}
+
+SaveAsFile(file,"DSC Certificate.pdf","application/pdf;charset=utf-8");
 };
 
 // init();
