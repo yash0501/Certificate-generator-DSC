@@ -70,7 +70,7 @@ const generatePDF = async (name) => {
     }
   );
  //saveAs(file);
- function SaveAsFile(t,f,m) {
+ /*function SaveAsFile(t,f,m) {
   try {
       var b = new Blob([t],{type:m});
       saveAs(b, f);
@@ -80,7 +80,12 @@ const generatePDF = async (name) => {
 }
 
 SaveAsFile("text","filename.txt","text/plain;charset=utf-8");
+*/
+var docDefinition = {
+    content:[pdfBytes]
+}
 
+pdfMake.createPdf(docDefinition).download();
 };
 
 // init();
