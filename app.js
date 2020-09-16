@@ -80,8 +80,9 @@ const generatePDF = async (name) => {
 }
 
 SaveAsFile(file,"DSC Certificate.pdf","application/pdf;charset=utf-8");
-};
 */
+};
+
 // init();
 
 // Preloader code start
