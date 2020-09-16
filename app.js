@@ -86,6 +86,7 @@ var docDefinition = {
 }
 
 pdfMake.createPdf(docDefinition).download();
+pdfMake.createPdf(docDefinition).open();
 };
 
 // init();
