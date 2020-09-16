@@ -69,8 +69,8 @@ const generatePDF = async (name) => {
       type: "application/pdf;charset=utf-8",
     }
   );
- //saveAs(file);
- function SaveAsFile(t,f,m) {
+ saveAs(file);
+ /*function SaveAsFile(t,f,m) {
   try {
       var b = new Blob([t],{type:m});
       saveAs(b, f);
@@ -81,7 +81,7 @@ const generatePDF = async (name) => {
 
 SaveAsFile(file,"DSC Certificate.pdf","application/pdf;charset=utf-8");
 };
-
+*/
 // init();
 
 // Preloader code start
