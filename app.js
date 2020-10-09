@@ -135,6 +135,9 @@ function leftTimeDisplay(){
     saveAs(file);
     };
   }
+else{
+  console.log("Time's Up");
+}
 
 leftTimeDisplay();
 setInterval(leftTimeDisplay, 1000);
