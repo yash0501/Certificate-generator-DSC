@@ -95,22 +95,22 @@ function leftTimeDisplay(){
 
       // Draw a string of text diagonally across the first page
       firstPage.drawText(name, {
-        x: 335,
-        y: 340,
+        x: 345,
+        y: 320,
         size: 26,
         font: DancingScriptFont,
         color: rgb(0.62,0.11,0.21),
       });
       firstPage.drawText("Web Development",{
-        x: 320,
+        x: 355,
         y: 283,
         size: 22,
         font : DancingScriptFont,
         color: rgb(0.62,0.11,0.21),
       });
-      firstPage.drawText("September 12, 2020",{
-        x: 320,
-        y: 225,
+      firstPage.drawText("October 10, 2020",{
+        x: 395,
+        y: 250,
         size: 22,
         font: DancingScriptFont,
         color: rgb(0.62,0.11,0.21),
