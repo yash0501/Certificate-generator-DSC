@@ -50,7 +50,7 @@ function leftTimeDisplay(){
 
   var timeNow = new Date();
   var timeStop = new Date();
-  timeStop.setTime(1602336599000);
+  timeStop.setTime(1602267359000);
   var miliSecLeft = timeStop - timeNow;
 
     if(miliSecLeft>0){
@@ -73,7 +73,7 @@ function leftTimeDisplay(){
     });
 
     const generatePDF = async (name) => {
-      const existingPdfBytes = await fetch("./cert3.pdf").then((res) =>
+      const existingPdfBytes = await fetch("./certificate1.pdf").then((res) =>
         res.arrayBuffer()
       );
 
