@@ -2,6 +2,27 @@
     --dark-color: #212121;
 }
 
+#loader_page{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #edf0f3;
+    background-repeat: no-repeat;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.logo2{
+    cursor: pointer;
+}
+.logo1{
+    display: none;
+}
+
+
 body{
     font-family: system-ui;
     text-align: center;
@@ -17,18 +38,27 @@ h4{
 .circle{
     border-radius: 150%;
     height: 120px;
+    margin-top: -60px;
 }
 
 main{
+    width: 100%;
+    margin: 0 0 0 0;
+    padding: 0;
+    overflow:auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 200px;
+    padding-top: 60px;
 }
 
 main *{
     margin-bottom: 12px;
+}
 
+.anchor{
+  position: absolute;
+  margin: -4em;
 }
 
 input{
@@ -37,8 +67,7 @@ input{
     border-bottom: 1px solid black;
     border: none;
     text-align: center;
-    text-transform: capitalize;
-    width: 100%;
+    width: 55%;
 }
 
 /* for styling the autocomplete style */
@@ -86,3 +115,107 @@ input:-webkit-autofill:active {
   -webkit-text-fill-color: #fff !important;
    }
 }
+
+
+
+/* MOBILE VIEW */
+#menu {
+    display: none;
+    cursor: pointer;
+    opacity: 1;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+#menu:hover{
+     opacity: .8;
+     transition: all 0.5s ease;
+     border-color: #17a2b8;
+}
+  
+.overlay {
+    height: 100%;
+    width: 0%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #24252a;
+    opacity: 1;
+    overflow-x: hidden;
+    z-index: 9999;
+    transition: all 0.4s ease 0s;
+}
+
+.overlay_clicked{
+    height: 100%;
+    width: 80%;
+    position: fixed;
+    z-index: 9999999;
+    top: 0;
+    left: 0;
+    background-color: #24252a;
+    opacity: 1;
+    overflow-x: hidden;
+    transition: all 0.4s ease-out 0s;
+}
+
+  
+.overlay__content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+  
+.overlay a {
+    padding: 15px;
+    font-size: 8vw;
+    display: block;
+    color: #edf0f1;
+    transition: all 0.3s ease 0s;
+}
+  
+.overlay a:hover {
+    text-decoration: none;
+    color: #0088a9;
+}
+
+
+/* MEDIA QUERIES */
+@media (max-height: 450px) {
+    .overlay a {
+      font-size: 20px;
+    }
+    .overlay .close {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+}
+
+@media (max-width:500px){
+  .logo2{
+    display: none;
+  }
+  .logo1{
+   display: block;
+  }
+}
+
+@media(min-width:565px){
+  .overlay a{
+    font-size: 4.62vw;
+  }
+}
+
+@media  (max-width: 990px) {
+    #menu {
+      display: block;
+    }
+}
+
+
+
+

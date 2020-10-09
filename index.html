@@ -8,29 +8,28 @@
     <link href="https://fonts.googleapis.com/css?family=Exo+2&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
+<body onload="fLoad()">
+
     <!-- Preloader -->
 
     <div id="loader_page">
-         <img src="img/giphy.gif" alt="" class="img-fluid" width="30%">
+         <img src="giphy.gif" alt="" class="img-fluid" width="30%">
     </div>
     
 
 
     <!-- NAVBAR -->
-
+   
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light" style="overflow-x: hidden; position: fixed; top: 0; width: 100%;">
         <a class="navbar-brand" href="https://dscjss.in/index.html">
-            <img  src="dsc_linear.png" height="37px" width="380px">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+            <img class="logo2" src="dsc_linear.png" height="37px" width="400px">
+            <img class="logo1" src="logo.png" height= "37px" width="80px">
+         </a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent" style="position: inherit; right: 2%;">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item  active">
@@ -44,15 +43,41 @@
               </li>
             </ul>
          </div>
+         <i class="material-icons"  id="menu" onclick="openNav()" style=" color: black;">menu</i>
+        
     </nav>  
 
-    
+    <br><br>
+
+
+
+    <!-- Mobile menu -->
+   <div id="mobile__menu" class="overlay" style="z-index: 999999;">
+        <div class="overlay__content">
+            <a href="#">Certificates</a>
+            <a href="https://dscjss.in/">Home</a>
+            <a href="https://dscjss.in/workshops.html">Workshops</a>
+        </div>
+   </div>
+
+
+
+
 
     <!-- CONTENT -->
 
     <main>
+        <a name="start" id="start" class="anchor"></a>
         <img src="dsc_jss.png" class="circle">
         <h4 style="color: grey; font-size: 26px; letter-spacing: 1.5px; font-weight: bold;">Get your Certificates for the latest workshops organized by <span style="color: #007bff;">DSC JSSATEN</span></h4>
+
+        <div class="time">
+          <p id="left">
+            Time left to get your Certificate is running fast! 
+            <span id="tleft">Time left here</span>
+          </p>
+        </div>
+        
         <label for="name">Enter your Name</label>
         <input required type="text" placeholder="Enter your name" name="Name" id="name" autocomplete="name" minlength="3">
 
@@ -77,13 +102,13 @@
 
     <footer style="display: flex; justify-content: center; text-align: center; flex-direction: column;" >
 
-        <div class="getintouch "  style="margin-top: 150px;">
+        <div class="getintouch"  style="margin-top: 15px;">
             <a href="mailto:admin@dscjss.in" class="btn btn-dark">Get in Touch</a>
         </div>
     
     
     
-        <div class="social" style="margin-top: 30px; margin-bottom: 100px;">
+        <div class="social" style="margin-top: 30px; margin-bottom: 15px;">
             <a href="https://twitter.com/DSCJSSATEN" target="_blank" style="text-decoration: none; color: grey;"><i class='fa fa-twitter' id="links" style='font-size:36px; '></i></a>
             <a href="https://www.facebook.com/dscjssnoida/" target="_blank" style="text-decoration: none; color: grey;"><i class='fa fa-facebook-square' id="links" style='font-size:36px; '></i></a>
             <a href="https://github.com/DSC-JSS-NOIDA" target="_blank" style="text-decoration: none; color: grey;"><i class='fa fa-github' id="links" style='font-size:36px; '></i></a>
@@ -93,19 +118,20 @@
     
     
     </footer>
-    
 
+    
+    
 
 
 
 
         <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
         <script src="https://unpkg.com/@pdf-lib/fontkit@0.0.4"></script>
-        <script src="./fileSaver.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-        <script src="app.js"></script>
+        <script type="text/javascript" src="app.js"></script>
 </body>
 </html>
