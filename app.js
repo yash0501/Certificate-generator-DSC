@@ -17,7 +17,7 @@ function leftTimeDisplay(){
   var hrs;
   var timeNow = new Date();
   var timeStop = new Date();
-  timeStop.setTime(1602267359000);
+  timeStop.setTime(1602336599000);
   var miliSecLeft = timeStop - timeNow;
   var secLeft = Math.round(miliSecLeft/1000);
   var minLeft = Math.round(secLeft/60);
@@ -50,7 +50,7 @@ function leftTimeDisplay(){
 
   var timeNow = new Date();
   var timeStop = new Date();
-  timeStop.setTime(1602267359000);
+  timeStop.setTime(1602336599000);
   var miliSecLeft = timeStop - timeNow;
 
     if(miliSecLeft>0){
