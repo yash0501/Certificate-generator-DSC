@@ -109,7 +109,7 @@ function leftTimeDisplay(){
         color: rgb(0.62,0.11,0.21),
       });
       firstPage.drawText("October 10, 2020",{
-        x: 460,
+        x: 540,
         y: 250,
         size: 22,
         font: DancingScriptFont,
