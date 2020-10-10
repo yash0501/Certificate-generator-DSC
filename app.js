@@ -74,7 +74,7 @@ function leftTimeDisplay(){
     submitBtn.addEventListener("click", () => {
       submitBtn.innerText = "Generating Your Certificate";
       submitBtn.style.color = "white";
-      submitBtn.style.backgroundColor = "blue";
+      submitBtn.style.backgroundColor = "#485998";
     });
     const generatePDF = async (name) => {
       const existingPdfBytes = await fetch("./certificate1.pdf").then((res) =>
@@ -142,7 +142,7 @@ function leftTimeDisplay(){
     function transition(){
     submitBtn.innerText = "Get your Certificate";
     submitBtn.style.color = "white";
-    submitBtn.style.backgroundColor = "green";
+    submitBtn.style.backgroundColor = "#8bc34a";
     }
   }
 else{
