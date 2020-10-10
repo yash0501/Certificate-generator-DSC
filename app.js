@@ -71,7 +71,11 @@ function leftTimeDisplay(){
         userName.reportValidity();
       }
     });
-
+    submitBtn.addEventListener("click", () => {
+      submitBtn.innerText = "Generating Your Certificate";
+      submitBtn.style.color = "white";
+      submitBtn.style.backgroundColor = "blue";
+    });
     const generatePDF = async (name) => {
       const existingPdfBytes = await fetch("./certificate1.pdf").then((res) =>
         res.arrayBuffer()
@@ -134,6 +138,9 @@ function leftTimeDisplay(){
       );
     saveAs(file);
     };
+    submitBtn.innerText = "Get your Certificate";
+    submitBtn.style.color = "white";
+    submitBtn.style.backgroundColor = "green";
   }
 else{
   console.log("Time's Up");
