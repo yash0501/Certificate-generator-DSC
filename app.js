@@ -19,9 +19,9 @@ function leftTimeDisplay(){
   var timeStop = new Date();
   timeStop.setTime(1602336599000);
   var miliSecLeft = timeStop - timeNow;
-  var secLeft = Math.round(miliSecLeft/1000);
-  var minLeft = Math.round(secLeft/60);
-  var hrLeft = Math.round(minLeft/60);
+  var secLeft = parseInt(miliSecLeft/1000);
+  var minLeft = parseInt(secLeft/60);
+  var hrLeft = parseInt(minLeft/60);
   if(miliSecLeft<0){
     document.getElementById("left").innerText = "Wait for the next workshop. Wishing to see you there";
   }
