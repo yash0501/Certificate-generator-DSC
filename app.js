@@ -103,21 +103,21 @@ function leftTimeDisplay(){
         y: 320,
         size: 26,
         font: BaskervilleFont,
-        color: rgb(0.62,0.11,0.21),
+        color: rgb(0.23,0.27,0.29),
       });
       firstPage.drawText("Web Development",{
         x: 355,
         y: 283,
         size: 22,
         font : BaskervilleFont,
-        color: rgb(0.62,0.11,0.21),
+        color: rgb(0.23,0.27,0.29),
       });
       firstPage.drawText("October 10, 2020",{
         x: 540,
         y: 247,
         size: 22,
         font: BaskervilleFont,
-        color: rgb(0.62,0.11,0.21),
+        color: rgb(0.23,0.27,0.29),
       });
 
       // Serialize the PDFDocument to bytes (a Uint8Array)
