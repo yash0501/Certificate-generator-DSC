@@ -137,10 +137,13 @@ function leftTimeDisplay(){
         }
       );
     saveAs(file);
+    transition();
     };
+    function transition(){
     submitBtn.innerText = "Get your Certificate";
     submitBtn.style.color = "white";
     submitBtn.style.backgroundColor = "green";
+    }
   }
 else{
   console.log("Time's Up");
