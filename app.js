@@ -82,7 +82,7 @@ function leftTimeDisplay(){
       pdfDoc.registerFontkit(fontkit);
 
       //get font
-      const fontBytes = await fetch("./BASKVILL.ttf").then((res) =>
+      const fontBytes = await fetch("./BASKVILL.TTF").then((res) =>
         res.arrayBuffer()
       );
 
