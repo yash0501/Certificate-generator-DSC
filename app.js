@@ -82,12 +82,12 @@ function leftTimeDisplay(){
       pdfDoc.registerFontkit(fontkit);
 
       //get font
-      const fontBytes = await fetch("./DancingScript-Regular.ttf").then((res) =>
+      const fontBytes = await fetch("./BASKVILL.ttf").then((res) =>
         res.arrayBuffer()
       );
 
       // Embed our custom font in the document
-      const DancingScriptFont = await pdfDoc.embedFont(fontBytes);
+      const BaskervilleFont = await pdfDoc.embedFont(fontBytes);
 
       // Get the first page of the document
       const pages = pdfDoc.getPages();
@@ -98,21 +98,21 @@ function leftTimeDisplay(){
         x: 345,
         y: 320,
         size: 26,
-        font: DancingScriptFont,
+        font: BaskervilleFont,
         color: rgb(0.62,0.11,0.21),
       });
       firstPage.drawText("Web Development",{
         x: 355,
         y: 283,
         size: 22,
-        font : DancingScriptFont,
+        font : BaskervilleFont,
         color: rgb(0.62,0.11,0.21),
       });
       firstPage.drawText("October 10, 2020",{
         x: 540,
-        y: 250,
+        y: 247,
         size: 22,
-        font: DancingScriptFont,
+        font: BaskervilleFont,
         color: rgb(0.62,0.11,0.21),
       });
 
